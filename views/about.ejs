@@ -1,0 +1,31 @@
+<%- include("partials/header") %>
+<%- include("partials/nav") %>
+
+<div class="flex items-center justify-center">
+    <h1 class="mt-10 py-2 text-4xl font-semibold border-b-[3px] border-purple-600">About Us</h1>
+</div>
+
+<div class="max-w-screen-xl flex flex-col mt-10 flex-wrap items-center justify-between mx-auto p-4">
+
+    <img class="h-[20vw]" src="/images/about.png" alt="">
+    <p class="p-4 m-4 w-[50vw]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores excepturi eveniet illo voluptate similique eligendi, libero molestias inventore. Nihil.</p>
+    
+    <form class="flex flex-col items-center gap-5" action="/register" method="post">
+        <div class="flex flex-col gap-3 font-semibold">
+            <label>Name</label>
+            <input class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700" type="text" placeholder="Enter your name" name="name">
+        </div>
+        <div class="flex flex-col gap-3 font-semibold">
+            <label>Email</label>
+            <input class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700" type="text" placeholder="Enter your email address" name="email">
+        </div>
+
+        <div>
+            <button class="bg-purple-600 text-white font-semibold rounded w-[30vw] hover:bg-purple-500 py-2">Connect Now</button>
+        </div>
+    </form>
+
+</div>
+
+
+<%- include("partials/footer") %>
