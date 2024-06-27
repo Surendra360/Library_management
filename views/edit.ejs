@@ -31,56 +31,54 @@
       </div>
 
       <div>
-        <form class="flex flex-col items-center gap-5" action="/edit/<%=book._id%>" method="post">
+        <form class="flex flex-col items-center gap-5" action="/update/<%=book._id%>" method="post">
           <div class="flex flex-col gap-2 font-semibold">
-              <label class="text-gray-600">Poster</label>
-              <input
-                  class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
-                  type="text" placeholder="Past poster URL" name="poster" value="<%=book.poster %>">
+            <label class="text-gray-600">Poster</label>
+            <input class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+              type="text" placeholder="Past poster URL" name="poster" value="<%=book.poster %>">
           </div>
           <div class="flex flex-col gap-2 font-semibold">
-              <label class="text-gray-600">Title Of The Book</label>
-              <input
-                  class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
-                  type="text" placeholder="Past poster URL" name="booktitle" value="<%=book.booktitle %>">
+            <label class="text-gray-600">Title Of The Book</label>
+            <input class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+              type="text" placeholder="Past poster URL" name="booktitle" value="<%=book.booktitle %>">
           </div>
           <div class="flex flex-col gap-2 font-semibold">
-              <label>Book name</label>
-              <input
-                  class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
-                  type="text" placeholder="Enter book name" name="bookname" value="<%=book.bookname %>">
+            <label>Book name</label>
+            <input class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+              type="text" placeholder="Enter book name" name="bookname" value="<%=book.bookname %>">
           </div>
           <div class="flex flex-col gap-2 font-semibold">
-              <label>Author name</label>
-              <input
-                  class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
-                  type="text" placeholder="Enter author name" name="authorname" value="<%=book.authorname %>">
+            <label>Author name</label>
+            <input class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+              type="text" placeholder="Enter author name" name="authorname" value="<%=book.authorname %>">
           </div>
           <div class="flex flex-col gap-2 font-semibold">
-              <label>Book ISBN No.</label>
-              <input
-                  class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
-                  type="text" placeholder="Ex-12d34j54n3" name="isbn" value="<%=book.isbn %>">
+            <label>Book ISBN No.</label>
+            <input class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+              type="text" placeholder="Ex-12d34j54n3" name="isbn" value="<%=book.isbn %>">
           </div>
           <div class="flex flex-col gap-2 font-semibold">
-              <label>Price</label>
-              <input
-                  class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
-                  type="text" placeholder="Enter book amount" name="price" value="<%=book.price %>">
+            <label>Price</label>
+            <input class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+              type="text" placeholder="Enter book amount" name="price" value="<%=book.price %>">
           </div>
 
           <div class="flex flex-col gap-2 font-semibold">
-              <label>Description</label>
-              <textarea
-                  class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
-                  type="text" name="description" placeholder="Enter about book...." rows="6"><%=book.description %>"</textarea>
+            <label>Description</label>
+            <textarea
+              class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+              type="text" name="description" placeholder="Enter about book...."
+              rows="6"><%=book.description %>"</textarea>
           </div>
 
           <div>
-              <button
-                  class="bg-purple-600 text-white font-semibold rounded w-[30vw] hover:bg-purple-500 py-2">update</button>
+            <button
+              class="bg-purple-600 text-white font-semibold rounded w-[30vw] hover:bg-purple-500 py-2">Update</button>
           </div>
-      </form>
+          <a href="/delete/<%=book._id%>" class="bg-red-600 hover:bg-red-500 text-white font-semibold text-center w-[30vw] py-2 rounded">
+           Delete
+          </a>
+        </form>
       </div>
 
     </div>

@@ -40,6 +40,24 @@ router.get("/edit/:id", async (req,res,next)=>{
   }
 })
 
+router.post("/update/:id", async (req,res,next)=>{
+  try {
+    await bookModel.findByIdAndUpdate(req.params.id, req.body)
+    res.redirect("/library")
+  } catch (error) {
+    console.log(error);
+  }
+})
+
+router.get("/delete/:id", async (req,res,next)=>{
+  try {
+    await bookModel.findByIdAndDelete(req.params.id);
+    res.redirect("/library")
+  } catch (error) {
+    console.log(error);
+  }
+})
+
 router.get('/feedback', function(req, res, next) {
   res.render('feedback', { title: 'Feedback' });
 });

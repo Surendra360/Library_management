@@ -17,8 +17,8 @@
                             <h1 class="text-4xl mt-20 bg-gray-200 text-black">'<%= book.bookname%>'</h1>
                         </div>
                         <div class="flex flex-col items-center text-center">
-                            <h3 class="text-red-800 font-bold text-lg bg-gray-200">-<%=book.authorname%></h3>
-                            <p class="px-10 w-[45%] bg-gray-400"><%=book.description%></p>
+                            <h3 class="text-red-800 font-bold text-lg bg-gray-200 px-2">-<%=book.authorname%></h3>
+                            <p class="px-10 bg-gray-400"><%=book.description%></p>
                         </div>
                         <div class="flex items-center justify-between w-full">
                             <p class="bg-gray-700 px-2 text-yellow-200">ISBN: <%=book.isbn%></p>
@@ -31,7 +31,7 @@
                             <p class="text-sm"><%=book.booktitle%>.</p>
                         </div>
                         <div>
-                            <a class="text-white rounded px-2 text-2sm py-1 bg-purple-600 hover:bg-purple-500" href="/edit/<%=book._id%>">Edit</a>
+                            <a class="text-white rounded px-2 text-2sm py-1 bg-green-600 hover:bg-green-500" href="/edit/<%=book._id%>">Edit</a>
                         </div>
                     </div>
                 </div>
