@@ -1,57 +1,76 @@
 <%- include("partials/header") %>
-<%- include("partials/nav") %>
-<div class="bg-[url('/images/bg.webp')] bg-cover">
+    <%- include("partials/nav") %>
 
-    
-<div class="flex items-center justify-center">
-    <h1 class="mt-10 py-2 text-4xl font-semibold border-b-[3px] border-purple-600">Add New Book</h1>
-</div>
 
-<div class="flex items-center justify-around px-[10vw]">
-    
-    <div class="max-w-screen-xl flex flex-col mt-10 flex-wrap items-center justify-between p-4">
+        <div class="flex items-center justify-center">
+            <h1 class="mt-10 py-2 text-4xl font-semibold border-b-[3px] border-purple-600">Add New Book</h1>
+        </div>
 
-        <form class="flex flex-col items-center gap-5" action="/register" method="post">
-            <div class="flex flex-col gap-2 font-semibold">
-                <label class="text-gray-600">Poster</label>
-                <input class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700" type="text" placeholder="Past poster URL" name="poster">
+        <div class="flex items-center justify-around px-[10vw]">
+
+            <div class="max-w-screen-xl flex flex-col mt-10 flex-wrap items-center justify-between p-4">
+
+                <form class="flex flex-col items-center gap-5" action="/register" method="post">
+                    <div class="flex flex-col gap-2 font-semibold">
+                        <label class="text-gray-600">Poster</label>
+                        <input
+                            class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+                            type="text" placeholder="Past poster URL" name="poster">
+                    </div>
+                    <div class="flex flex-col gap-2 font-semibold">
+                        <label class="text-gray-600">Title Of The Book</label>
+                        <input
+                            class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+                            type="text" placeholder="Past poster URL" name="booktitle">
+                    </div>
+                    <div class="flex flex-col gap-2 font-semibold">
+                        <label>Book name</label>
+                        <input
+                            class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+                            type="text" placeholder="Enter book name" name="bookname">
+                    </div>
+                    <div class="flex flex-col gap-2 font-semibold">
+                        <label>Author name</label>
+                        <input
+                            class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+                            type="text" placeholder="Enter author name" name="authorname">
+                    </div>
+                    <div class="flex flex-col gap-2 font-semibold">
+                        <label>Book ISBN No.</label>
+                        <input
+                            class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+                            type="text" placeholder="Ex-12d34j54n3" name="isbn">
+                    </div>
+                    <div class="flex flex-col gap-2 font-semibold">
+                        <label>Price</label>
+                        <input
+                            class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+                            type="text" placeholder="Enter book amount" name="price">
+                    </div>
+
+                    <div class="flex flex-col gap-2 font-semibold">
+                        <label>Description</label>
+                        <textarea
+                            class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+                            type="text" name="description" placeholder="Enter about book...." rows="6"></textarea>
+                    </div>
+
+                    <div>
+                        <button
+                            class="bg-purple-600 text-white font-semibold rounded w-[30vw] hover:bg-purple-500 py-2">Add
+                            Book</button>
+                    </div>
+                </form>
+
             </div>
-            <div class="flex flex-col gap-2 font-semibold">
-                <label>Book name</label>
-                <input class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700" type="text" placeholder="Enter book name" name="bookname">
-            </div>
-            <div class="flex flex-col gap-2 font-semibold">
-                <label>Author name</label>
-                <input class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700" type="text" placeholder="Enter author name" name="authorname">
-            </div>
-            <div class="flex flex-col gap-2 font-semibold">
-                <label>Book ISBN No.</label>
-                <input class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700" type="text" placeholder="Ex-12d34j54n3" name="isbn">
-            </div>
-            <div class="flex flex-col gap-2 font-semibold">
-                <label>Price</label>
-                <input class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700" type="text" placeholder="Enter book amount" name="price">
-            </div>
-    
-            <div class="flex flex-col gap-2 font-semibold">
-                <label>Description</label>
-                <textarea class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700" type="text" name="description" placeholder="Enter about book...." rows="6" ></textarea>
-            </div>
-    
+
             <div>
-                <button class="bg-purple-600 text-white font-semibold rounded w-[30vw] hover:bg-purple-500 py-2">Add Book</button>
+                <img class="h-[50vw]" src="images/addbook.png" alt="">
             </div>
-        </form>
-    
-    </div>
 
-    <div>
-        <img class="h-[50vw]" src="images/addbook.png" alt="">
-    </div>
-
-</div>
+        </div>
 
 
-</div>
 
-<%- include("partials/footer") %>
+
+        <%- include("partials/footer") %>

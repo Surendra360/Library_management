@@ -1,10 +1,12 @@
 const mongoose = require("mongoose");
 
 mongoose
-  .connect("mongodb://0.0.0.0/Book_Store")
+  .connect(process.env.MONGO_URL)
   .then(() => {
     console.log("Database connected");
   })
   .catch((e) => {
     console.log(e.message);
   });
+
+  
