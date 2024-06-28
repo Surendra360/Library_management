@@ -10,13 +10,26 @@
 
             <div class="max-w-screen-xl flex flex-col mt-10 flex-wrap items-center justify-between p-4">
 
-                <form class="flex flex-col items-center gap-5" action="/register" method="post">
-                    <div class="flex flex-col gap-2 ">
+                <!-- <form class="flex flex-col items-center gap-5" action="/register" method="post"> -->
+                <!-- adding multer features -->
+                <form class="flex flex-col items-center gap-5" action="/register" method="post"
+                    enctype="multipart/form-data">
+
+                    <!-- <div class="flex flex-col gap-2 ">
                         <label class="text-gray-600">Poster</label>
                         <input
                             class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
                             type="text" placeholder="Past poster URL" name="poster">
+                    </div> -->
+
+                    <!-- type: file -->
+                    <div class="flex flex-col gap-2 ">
+                        <label class="text-gray-600">Poster</label>
+                        <input
+                            class="w-[30vw] border-2 px-4 py-2 rounded focus:outline-none focus:ring-0 focus:border-purple-700"
+                            type="file" placeholder="Select file in local device" name="poster">
                     </div>
+
                     <div class="flex flex-col gap-2 ">
                         <label class="text-gray-600">Title Of The Book</label>
                         <input

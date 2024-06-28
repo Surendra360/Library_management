@@ -1,6 +1,6 @@
 <%- include("partials/header") %>
-<%- include("partials/nav") %>
-        
+    <%- include("partials/nav") %>
+
         <div class="flex items-center justify-center">
             <h1 class="mt-10 py-2 text-4xl font-semibold border-b-[3px] border-purple-600">All Books</h1>
         </div>
@@ -8,37 +8,52 @@
         <div class="max-w-screen-xl flex gap-20 mt-10 flex-wrap items-center justify-start mx-auto p-4">
 
             <% books.forEach(book=>{ %>
-                
+
                 <div class="w-[22rem] h-[30rem] rounded border-2">
                     <div
-                        class="text-center font-semibold text-white flex flex-col items-center justify-between  h-[26rem] bg-[url(<%=book.poster %>)] bg-cover rounded">
+                        class="text-center font-semibold text-white flex flex-col items-center justify-between  h-[26rem] bg-[url(/images/<%=book.poster %>)] bg-cover rounded">
                         <div class="p-5">
                             <p class="text-yellow-200 bg-gray-700">"<%= book.booktitle%>"</p>
                             <h1 class="text-4xl mt-20 bg-gray-200 text-black">'<%= book.bookname%>'</h1>
                         </div>
                         <div class="flex flex-col items-center text-center">
-                            <h3 class="text-red-800 font-bold text-lg bg-gray-200 px-2">-<%=book.authorname%></h3>
-                            <p class="px-10 bg-gray-400"><%=book.description%></p>
+                            <h3 class="text-red-800 font-bold text-lg bg-gray-200 px-2">-<%=book.authorname%>
+                            </h3>
+                            <p class="px-10 bg-gray-400">
+                                <%=book.description%>
+                            </p>
                         </div>
                         <div class="flex items-center justify-between w-full">
-                            <p class="bg-gray-700 px-2 text-yellow-200">ISBN: <%=book.isbn%></p>
+                            <p class="bg-gray-700 px-2 text-yellow-200">ISBN: <%=book.isbn%>
+                            </p>
                             <p class="bg-red-800 px-2 text-yellow-200">Rs. <%=book.price%>/-</p>
                         </div>
                     </div>
                     <div class="px-2 flex items-center justify-between">
                         <div>
-                            <h1 class="text-lg font-semibold"><%=book.bookname%></h1>
-                            <p class="text-sm"><%=book.booktitle%>.</p>
+                            <h1 class="text-lg font-semibold">
+                                <%=book.bookname%>
+                            </h1>
+                            <p class="text-sm">
+                                <%=book.booktitle%>.
+                            </p>
                         </div>
                         <div>
-                            <a class="text-white rounded px-2 text-2sm py-1 bg-green-600 hover:bg-green-500" href="/edit/<%=book._id%>">Edit</a>
+                            <a class="text-white rounded px-2 text-2sm py-1 bg-green-600 hover:bg-green-500"
+                                href="/edit/<%=book._id%>">Edit</a>
                         </div>
                     </div>
                 </div>
 
-           <% }) %>
+                <% }) %>
+
+                    <a href="/register">
+                        <div class="w-[22rem] h-[30rem] flex items-center justify-center bg-gray-100 rounded border-2">
+                            <img width="200px" src="/images/add.svg" alt="">
+                        </div>
+                    </a>
 
         </div>
 
 
- <%- include("partials/footer") %>
+        <%- include("partials/footer") %>
