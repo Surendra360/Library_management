@@ -9,10 +9,16 @@ const{checkPrice} = require("../utils/middlewares"); // import the check price m
 // const upload = require('../utils/multer').single("poster");
 const upload = require('../utils/multer');
 
+const {sendMail} = require("../utils/sendMail")
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
 });
+
+router.post("/sendmail", (req,res,next)=>{
+  sendMail(req,res);
+})
 
 router.get('/register', function(req, res, next) {
   res.render('register');
